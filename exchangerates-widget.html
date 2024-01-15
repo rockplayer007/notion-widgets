@@ -6,7 +6,6 @@
     // from=EUR&to=USD
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    var sURLVariables = sPageURL.split('&');
     var fm = urlParams.has('from')? urlParams.get('from'): "EUR"; //"EUR";
     var to = urlParams.has('to')? urlParams.get('to'): "USD"; // "USD";
     var tz = "timezone";

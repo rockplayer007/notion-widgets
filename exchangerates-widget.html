@@ -4,10 +4,11 @@
 <body>
   <script>
     // from=EUR&to=USD
-    var sPageURL = window.location.search.substring(1);
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
     var sURLVariables = sPageURL.split('&');
-    var fm = sURLVariables[0]; //"EUR";
-    var to = sURLVariables[0]; // "USD";
+    var fm = urlParams.has('from')? urlParams.get('from'): "EUR"; //"EUR";
+    var to = urlParams.has('to')? urlParams.get('to'): "USD"; // "USD";
     var tz = "timezone";
     var sz = "1x1";
     var lg = "en";

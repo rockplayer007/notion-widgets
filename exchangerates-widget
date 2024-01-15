@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+  <script>
+    // from=EUR&to=USD
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    var fm = sURLVariables[0]; //"EUR";
+    var to = sURLVariables[0]; // "USD";
+    var tz = "timezone";
+    var sz = "1x1";
+    var lg = "en";
+    var st = "primary";
+    var lr = "0";
+    var rd = "0";
+</script>
+<script src="//currencyrate.today/converter"></script>
+
+<div style="text-align:right"><a href="https://currencyrate.today">CurrencyRate</a></div>
+
+Source: https://currencyrate.today/converter-widget
+</body>
+</html>
